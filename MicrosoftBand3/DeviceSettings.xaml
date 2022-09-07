@@ -6,19 +6,33 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource SystemControlAcrylicWindowBrush}">
+    Background="{ThemeResource SystemColorBackgroundBrush}">
 
     <Grid x:Name="settings_grid">
         <Grid.RowDefinitions>
             <RowDefinition Height="48" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
+
+        <!--Rectangle Fill="White" Height="262" Width="3" HorizontalAlignment="Left" Margin="60,0,0,0" 
+                   VerticalAlignment="Center" Grid.RowSpan="2" x:Name="Device_Settings"/-->
+        
+        <Image Source="ms-appx:///Assets/back-arrow.png" Height="40" Width="40" 
+               HorizontalAlignment="Left" VerticalAlignment="Center" Margin="80,-120,0,0"/>
+
+        <Button x:Name="BackButton" Height="40" Width="40" Opacity="0"
+                VerticalAlignment="Top" Margin="80,-20,0,0" Click="Back_Click"/>
+
         <StackPanel>
-            <TextBlock Text="Microsoft Band Simulator" Margin="15,13,0,0"/>
+            <TextBlock Text="Microsoft Band 3 Simulator" FontSize="18" Margin="15,15,0,0"/>
             <Image Source="ms-appx:///Assets/mslogo.png" Height="20" Width="20" Margin="0,-15,0,0"/>
         </StackPanel>
-        <StackPanel Grid.Row="1" HorizontalAlignment="Left" Margin="30,30,0,0">
-            <ComboBox SelectionChanged="ThemeComboBox_SelectionChanged"  Header="Select the device theme" PlaceholderText="Theme" Width="200" x:Name="ThemeComboBox">
+        <StackPanel Grid.Row="1" HorizontalAlignment="Left" Margin="10,10,0,0">
+            <ComboBox SelectionChanged="ThemeComboBox_SelectionChanged"  
+                      Header="Select the device theme" PlaceholderText="Theme" 
+                      Width="200" 
+                      FontSize="18" 
+                      x:Name="ThemeComboBox">
                 <x:String>Microsoft Blue</x:String>
                 <x:String>Dark Cyan</x:String>
                 <x:String>Teal</x:String>
@@ -31,9 +45,23 @@
                 <x:String>Magenta</x:String>
                 <x:String>Purple</x:String>
             </ComboBox>
-            <TextBox x:Name="DeviceName" PlaceholderText="Type the Band's name" Margin="0,30,0,0" Header="Device Name" TextChanged="DeviceName_TextChanged" MaxLength="16"/>
-            <Slider x:Name="BatteryPercentSet" Header="Select the battery level" Margin="0,30,0,0" ValueChanged="BatteryPercentSet_ValueChanged"/>
+            <TextBox x:Name="DeviceName" 
+                     PlaceholderText="Type the Band's name" 
+                     Margin="0,10,0,0" Header="Device Name" 
+                     FontSize="18" 
+                     TextChanged="DeviceName_TextChanged" 
+                     MaxLength="16"/>
+            <Slider x:Name="BatteryPercentSet" 
+                    Header="Select the battery level" 
+                    Margin="0,10,0,0" 
+                    FontSize="18" 
+                    ValueChanged="BatteryPercentSet_ValueChanged"/>
         </StackPanel>
-        <Button Content="Back" x:Name="Back" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="1" Margin="0,0,0,40" Click="Back_Click" Style="{ThemeResource AccentButtonStyle}" Height="50" Width="100" FontSize="25"/>
+        <Button Content="Back" x:Name="Back" VerticalAlignment="Bottom" 
+                HorizontalAlignment="Left" Grid.Row="1" 
+                Margin="0,0,0,40" 
+                Click="Back_Click" 
+                Style="{ThemeResource AccentButtonStyle}" 
+                Height="50" Width="100" FontSize="18"/>
     </Grid>
 </Page>

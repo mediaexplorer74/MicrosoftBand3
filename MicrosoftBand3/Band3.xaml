@@ -10,9 +10,10 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="517*"/>
-            <RowDefinition Height="483*"/>
+            <RowDefinition Height="117*"/>
+            <RowDefinition Height="183*"/>
         </Grid.RowDefinitions>
+        
         <ScrollViewer HorizontalScrollBarVisibility="Hidden" 
                       VerticalScrollBarVisibility="Disabled" 
                       x:Name="Band2view" 
@@ -21,67 +22,136 @@
                       Grid.RowSpan="2" 
                       Loaded="ScrollViewer_Loaded"
                       ViewChanged="Band2view_ViewChanged">
+            
             <Grid VerticalAlignment="Center" Margin="0,0,0,0">
-                <ProgressBar x:Name="batteryPercent" Height="13" Width="31"  Value="50" 
-                             HorizontalAlignment="Left" Margin="30,65,0,0" VerticalAlignment="Top" x:FieldModifier="Public" Background="Black" Foreground="White" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                
+                <ProgressBar x:Name="batteryPercent" 
+                             Height="23" Width="31"  
+                             Value="50" 
+                             HorizontalAlignment="Left" 
+                             Margin="156,65,0,184" 
+                             VerticalAlignment="Top" 
+                             x:FieldModifier="Public" 
+                             Background="Black" 
+                             Foreground="White" 
+                             UseLayoutRounding="False" 
+                             d:LayoutRounding="Auto">
+                    
                     <ProgressBar.RenderTransform>
                         <CompositeTransform Rotation="-90" ScaleY="-1"/>
                     </ProgressBar.RenderTransform>
                 </ProgressBar>
+                
                 <Image Source="ms-appx:///Assets/Icons/battery.png" 
-                       HorizontalAlignment="Left" Margin="13,26.5,0,184" 
-                       Width="21" Height="90"/>
-                <Image Source="ms-appx:///Assets/cargo_fiber.png" 
+                       HorizontalAlignment="Left" 
+                       Margin="143,26.5,0,184" 
+                       Width="21" 
+                       Height="90"/>
+
+                <!--Width="284"-->
+                    <Image Source="ms-appx:///Assets/cargo_fiber.png" 
                        VerticalAlignment="Center" 
-                       Visibility="Visible" Height="260" Margin="45,0,832,0"/>
-                <TextBlock FontSize="100" 
-                           HorizontalAlignment="Left" VerticalAlignment="Top" 
-                           Margin="70,5,0,0" Height="250" Width="480" x:Name="ClockTime"/>
+                       Visibility="Visible" 
+                       
+                       Height="108" 
+                       Margin="240,0,832,0"/>
+                
                 <TextBlock FontSize="50" 
                            HorizontalAlignment="Left" VerticalAlignment="Top" 
-                           Margin="560,105,0,0" x:Name="DayName"/>
-                <TextBlock FontSize="50" 
-                           HorizontalAlignment="Left" VerticalAlignment="Top" 
-                           Margin="560,166,0,0" x:Name="Date"/>
-                <Rectangle Height="260" 
-                           Margin="720,0,652,0" 
-                           x:Name="Tile1"/>
-                <Rectangle Height="260" 
+                           Margin="280,75,0,0" 
+                           Height="108" 
+                           Width="480" 
+                           x:Name="ClockTime"/>
+                
+                <TextBlock FontSize="24" 
+                           HorizontalAlignment="Left" 
+                           VerticalAlignment="Top" 
+                           Margin="480,105,0,0" 
+                           x:Name="DayName"/>
+                
+                <TextBlock FontSize="24" 
+                           HorizontalAlignment="Left" 
+                           VerticalAlignment="Top" 
+                           Margin="480,136,0,0" 
+                           x:Name="Date"/>
+                
+                
+                
+                
+                <!--Rectangle Height="140" 
+                           Margin="620,0,652,0" 
+                           x:Name="Tile1"/-->
+                
+                <!--Rectangle Height="140" 
                            Margin="718,0,851,0" 
                            VerticalAlignment="Center" 
                            x:Name="TranLine" 
                            Fill="Black" 
-                           Width="3"/>
+                           Width="3"/-->
+                
+                
                 <Image Source="ms-appx:///Assets/Icons/uv.png" 
-                       VerticalAlignment="Center" Height="100" Width="100" 
-                       Margin="769,0,701,0"/>
-                <Rectangle Height="260" Margin="823,0,431,0" 
-                           x:Name="Tile2"/>
+                       VerticalAlignment="Center" 
+                       Height="80" 
+                       Width="80" 
+                       Margin="440,0,375,0"/>
+                
+                <!--Rectangle Height="140" 
+                           Margin="823,0,431,0" 
+                           x:Name="Tile2"/-->
+                
                 <Image Source="ms-appx:///Assets/Icons/alarm.png" 
                        VerticalAlignment="Center" 
-                       Height="100" Width="100" Margin="881,0,489,0"/>
-                <Rectangle Height="260" 
-                           Margin="1044,0,220,0" x:Name="Tile3"/>
+                       Height="80" 
+                       Width="80" 
+                       Margin="780,0,440,0"/>
+
+                <!--Rectangle Height="140" 
+                           Margin="944,0,220,0" 
+                           x:Name="Tile3"/-->
+
                 <Image Source="ms-appx:///Assets/Icons/sleep.png" 
                        VerticalAlignment="Center" 
-                       Height="100" Width="100" 
-                       Margin="897,0,273,0"/>
-                <Rectangle Height="260" Margin="855,0,0,0" x:Name="Tile4"/>
+                       Height="80" 
+                       Width="80" 
+                       Margin="900,0,300,0"/>
+                
+                <!--Rectangle Height="140" 
+                           Margin="855,0,0,0" 
+                           x:Name="Tile4"/-->
+                
                 <Image Source="ms-appx:///Assets/Icons/settings.png" 
                        VerticalAlignment="Center" 
-                       Height="90" Width="90" 
-                       Margin="1000,0,62,0"/>
+                       Height="60" 
+                       Width="60" 
+                       Margin="1020,0,175,0"/>
+                
                 <Button x:Name="UVOpen" 
-                        Height="261" Width="178" Margin="700,0,0,0" 
-                        Click="UVOpen_Click" Opacity="0"/>
+                        Height="80" 
+                        Width="80" 
+                        Margin="670,0,0,0" 
+                        Opacity="0"
+                        Click="UVOpen_Click" />
+                
                 <Button x:Name="AlarmOpen" 
-                        Height="261" Width="216" Margin="903,0,0,0" Opacity="0" 
+                        Height="80" 
+                        Width="80" 
+                        Margin="810,0,0,0" 
+                        Opacity="0" 
                         Click="AlarmOpen_Click"/>
+                
                 <Button x:Name="SleepOpen" 
-                        Height="261" Width="206" Margin="1044,0,0,0" Opacity="0" 
+                        Height="80" 
+                        Width="80" 
+                        Margin="940,0,0,0" 
+                        Opacity="0" 
                         Click="SleepOpen_Click"/>
+                
                 <Button x:Name="SettingOpen" 
-                        Height="261" Width="215" Margin="1356,0,0,0" Opacity="0" 
+                        Height="80" 
+                        Width="80" 
+                        Margin="1060,0,0,0" 
+                        Opacity="0" 
                         Click="SettingOpen_Click"/>
             </Grid>
         </ScrollViewer>

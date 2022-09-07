@@ -13,9 +13,16 @@
             <RowDefinition Height="517*"/>
             <RowDefinition Height="483*"/>
         </Grid.RowDefinitions>
-        <Rectangle Fill="White" Height="262" Width="3" HorizontalAlignment="Left" Margin="60,0,0,0" VerticalAlignment="Center" Grid.RowSpan="2" x:Name="SettingSidebar"/>
-        <Image Source="ms-appx:///Assets/back-arrow.png" Height="40" Width="40" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,-50,0,0"/>
-        <Button x:Name="BackButton" Height="40" Width="40" VerticalAlignment="Top" Margin="10,22,0,0" Click="BackButton_Click"/>
+        
+        <Rectangle Fill="White" Height="262" Width="3" HorizontalAlignment="Left" Margin="60,0,0,0" 
+                   VerticalAlignment="Center" Grid.RowSpan="2" x:Name="SettingSidebar"/>
+
+        <Image Source="ms-appx:///Assets/back-arrow.png" Height="40" Width="40" 
+               HorizontalAlignment="Left" VerticalAlignment="Center" Margin="80,-120,0,0"/>
+
+        <Button x:Name="BackButton" Height="40" Width="40" Opacity="0"
+                VerticalAlignment="Top" Margin="80,-20,0,0" Click="BackButton_Click"/>
+
         <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Disabled" x:Name="Settingview" VerticalScrollMode="Disabled" HorizontalScrollMode="Enabled" Grid.RowSpan="2" Margin="60,0,0,0" Loaded="Settingview_Loaded">
             <Grid Margin="0,0,0,0" Width="1400">
                 <Button x:Name="Setting1" VerticalAlignment="Top" Height="140" Width="140" Margin="40,60,0,0" Click="Setting1_Click">

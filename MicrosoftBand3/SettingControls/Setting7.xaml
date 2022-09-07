@@ -9,16 +9,26 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="94*"/>
+            <ColumnDefinition Width="1407*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="517*"/>
             <RowDefinition Height="483*"/>
         </Grid.RowDefinitions>
-        <Rectangle Fill="White" Height="262" Width="3" HorizontalAlignment="Left" Margin="60,0,0,0" VerticalAlignment="Center" Grid.RowSpan="2" x:Name="Setting7Sidebar"/>
-        <Image Source="ms-appx:///Assets/back-arrow.png" Height="40" Width="40" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,-50,0,0"/>
-        <Button x:Name="BackButton" Height="40" Width="40" VerticalAlignment="Top" Margin="10,22,0,0" Click="BackButton_Click"/>
-        <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Disabled" x:Name="Setting7view" VerticalScrollMode="Disabled" HorizontalScrollMode="Disabled" Grid.RowSpan="2" Margin="60,0,0,0" Loaded="Setting7view_Loaded">
+        <Rectangle Fill="White" Height="262" Width="3" HorizontalAlignment="Left" Margin="60,0,0,0" 
+                   VerticalAlignment="Center" Grid.RowSpan="2" x:Name="Setting7Sidebar"/>
+
+        <Image Source="ms-appx:///Assets/back-arrow.png" Height="40" Width="40" 
+               HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,179,0,0" Grid.ColumnSpan="2"/>
+
+        <Button x:Name="BackButton" Height="40" Width="40" Opacity="0"
+                VerticalAlignment="Top" Margin="80,-20,0,0" Click="BackButton_Click" Grid.ColumnSpan="2" HorizontalAlignment="Left"/>
+        <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Disabled" x:Name="Setting7view" VerticalScrollMode="Disabled" HorizontalScrollMode="Disabled" Grid.RowSpan="2" Margin="60,0,0,0" Loaded="Setting7view_Loaded" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <Grid Margin="0,0,0,0" Width="1400">
-                <TextBlock x:Name="PowerLabel" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Power" VerticalAlignment="Top" Height="100" Width="250" FontSize="50" IsColorFontEnabled="True" Margin="20,0,0,0"/>
+                <TextBlock x:Name="PowerLabel" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Power" 
+                           VerticalAlignment="Top" Height="100" Width="250" FontSize="40" IsColorFontEnabled="True" Margin="20,0,0,0"/>
                 <Button Content="Turn Power Off" HorizontalAlignment="Left" Height="130" Width="500" FontSize="60" Margin="20,50,0,0"/>
             </Grid>
         </ScrollViewer>

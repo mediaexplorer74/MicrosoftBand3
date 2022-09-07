@@ -200,7 +200,9 @@ namespace Microsoft_Band_Simulator
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MainPage), null, new SlideNavigationTransitionInfo() { Effect = SlideNavigationTransitionEffect.FromLeft });
+            //this.Frame.Navigate(typeof(MainPage), null, new SlideNavigationTransitionInfo()
+            //{ Effect = SlideNavigationTransitionEffect.FromLeft });
+            this.Frame.Navigate(typeof(MainPage), null, new SlideNavigationTransitionInfo() );
         }
 
 
@@ -213,5 +215,13 @@ namespace Microsoft_Band_Simulator
         {
             Band2.battery = Convert.ToInt32(e.NewValue);
         }
+
+        /*
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            //RnD
+            this.Frame.Navigate(typeof(Band2), null, new DrillInNavigationTransitionInfo());
+        }
+        */
     }
 }

@@ -45,7 +45,8 @@ namespace Microsoft_Band_Simulator
 
         private void DevSettingsButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(DeviceSettings), null, new SlideNavigationTransitionInfo() { Effect = SlideNavigationTransitionEffect.FromRight });
+            //this.Frame.Navigate(typeof(DeviceSettings), null, new SlideNavigationTransitionInfo() { Effect = SlideNavigationTransitionEffect.FromRight });
+            this.Frame.Navigate(typeof(DeviceSettings), null, new SlideNavigationTransitionInfo());
         }
     }
 }

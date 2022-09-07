@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid x:Name="grid" Background="{ThemeResource SystemControlAcrylicWindowBrush}">
+    <Grid x:Name="grid" Background="{ThemeResource SystemColorBackgroundBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="48" />
             <RowDefinition Height="*" />

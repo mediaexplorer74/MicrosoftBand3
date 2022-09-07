@@ -63,10 +63,11 @@ namespace Microsoft_Band_Simulator
         private void ScrollViewer_Loaded(object sender, RoutedEventArgs e)
         {
             // Setting theme at launch
-            Tile1.Fill = new SolidColorBrush(devtheme);
-            Tile2.Fill = new SolidColorBrush(devtheme);
-            Tile3.Fill = new SolidColorBrush(devtheme);
-            Tile4.Fill = new SolidColorBrush(devtheme);
+            //TODO
+            //Tile1.Fill = new SolidColorBrush(devtheme);
+            //Tile2.Fill = new SolidColorBrush(devtheme);
+            //Tile3.Fill = new SolidColorBrush(devtheme);
+            //Tile4.Fill = new SolidColorBrush(devtheme);
             // Setting battery value at launch
             batteryPercent.Value = battery;
             // Obsolete method, but is used in MSDocs. Okay to use here.
